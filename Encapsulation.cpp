@@ -19,14 +19,14 @@ public:
         balance -= amount;
     }
 };
-class HeatingSystem {
+class Boiler {
 public:
     void turnOn() {
-        std::cout << "Heating system turned on." << std::endl;
+        std::cout << "Boiler turned on." << std::endl;
     }
 
     void turnOff() {
-        std::cout << "Heating system turned off." << std::endl;
+        std::cout << "Boiler turned off." << std::endl;
     }
 };
 
@@ -139,13 +139,13 @@ int main() {
     //////////////////////////////////////////////////////////////////
 
     Thermostat thermostat(18.5);
-    HeatingSystem heating;
+    Boiler b;
 
     if (thermostat.getCurrentTemperature() < 20.0) {
-        heating.turnOn();
+        b.turnOn();
     }
     else {
-        heating.turnOff();
+        b.turnOff();
     }
     
     //////////////////////////////////////////////////////////////////
